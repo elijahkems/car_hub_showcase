@@ -7,8 +7,6 @@ import { CarProps } from "@/types";
 import ShowMore from "@/components/ShowMore";
 
 export default async function Home({ searchParams }: any) {
-  console.clear();
-  console.log(searchParams);
   const allCars = await fetchCars({
     manufacturer: searchParams.manufacturer || "",
     year: searchParams.year || 2022,
@@ -16,8 +14,6 @@ export default async function Home({ searchParams }: any) {
     limit: searchParams.limit || 10,
     model: searchParams.model || "",
   });
-  console.log(allCars.length);
-  // console.log(allCars);
   const isDataEmpty = allCars.length < 1 || !allCars;
   return (
     <main className="overflow-hidden bg-slate-300">
@@ -45,7 +41,7 @@ export default async function Home({ searchParams }: any) {
           </section>
         ) : (
           <div className="w-full text-center text-lg m-5 ">
-            No Cars specified above is available{" "}
+            No cars specified above are available
           </div>
         )}
       </div>
