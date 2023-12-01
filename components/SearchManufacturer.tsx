@@ -25,12 +25,12 @@ export default function SearchManufacturer({
     <div className="seach-manufacturer w-full relative">
       <Combobox value={manufacturer} onChange={setManufacturer}>
         <div className="flex flex-col justify-center items-start w-full">
-          <Combobox.Button className="absolute top-[14px] left-4 z-31">
+          <Combobox.Button className="absolute top-[14px] left-4 z-35">
             <Image src="/car-logo.svg" width={20} height={20} alt="Car Logo" />
           </Combobox.Button>
           <Combobox.Input
             className="search-manufacturer__input w-full pl-10" // Adjust padding to prevent overlap with the button
-            placeholder="tiguan"
+            placeholder="volkswagon"
             displayValue={(manufacturer: string) => manufacturer}
             onChange={(e) => setquery(e.target.value)}
           />

@@ -68,13 +68,12 @@ export default function SearchBar() {
     const newPathname = `${
       window.location.pathname
     }?${searchParams.toString()}`;
-    console.log(searchParams.toString());
     router.push(newPathname);
   };
 
   return (
     <form
-      className=" w-auto flex flex-col gap-3 justify-evenly sm:flex-row sm:w-full sm:gap-0"
+      className=" w-full flex flex-col gap-3 justify-evenly sm:flex-row sm:w-full sm:gap-0"
       onSubmit={handleSubmit}
     >
       <div className="flex justify-start items-center grow">

@@ -20,7 +20,7 @@ export default function CustomFilter({
         setParams(e.value);
       }}
     >
-      <div className="relative z-30  rounded-md">
+      <div className="relative z-25  rounded-md">
         <Listbox.Button className="custom-filter__btn">
           <span>{selected.title}</span>
           <Image
