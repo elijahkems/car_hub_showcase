@@ -1,10 +1,10 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 import CustomButton from "./CustomButton";
+import Link from "next/link";
 
 export default function Hero() {
-  const handleScroll = () => {};
   return (
     <div className="hero">
       <div className=" flex-1 pt-36 padding-x">
@@ -12,11 +12,12 @@ export default function Hero() {
         <p className=" hero__subtitle">
           streamline your car rental exprerience
         </p>
-        <CustomButton
-          title="Explore Cars"
-          containerStyles=" bg-primary-blue text-white rounded-full mt-10"
-          handleClick={handleScroll}
-        />
+        <Link href="#discover">
+          <CustomButton
+            title="Explore Cars"
+            containerStyles=" bg-primary-blue text-white rounded-full mt-10"
+          />
+        </Link>
       </div>
       <div className="hero__image-contaner">
         <div className="hero__image">

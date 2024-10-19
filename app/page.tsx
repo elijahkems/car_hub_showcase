@@ -15,8 +15,9 @@ export default async function Home({ searchParams }: any) {
     model: searchParams.model || "",
   });
   const isDataEmpty = allCars.length < 1 || !allCars;
+
   return (
-    <main className="overflow-hidden bg-slate-300">
+    <main className="overflow-hidden bg-slate-300 scroll-smooth">
       <Hero />
       <div className="mt-12 padding-x padding-y max-width " id="discover">
         <div className="home__text-container">
@@ -29,7 +30,7 @@ export default async function Home({ searchParams }: any) {
 
         {!isDataEmpty ? (
           <section>
-            <div className="home__cars-wrapper">
+            <div className="home__cars-wrapper " id="home_cars">
               {allCars.map((car: CarProps, i: number) => (
                 <CarCard key={i} car={car} />
               ))}
@@ -40,7 +41,7 @@ export default async function Home({ searchParams }: any) {
             </div>
           </section>
         ) : (
-          <div className="w-full text-center text-lg m-5 ">
+          <div className="w-full text-center text-lg m-5 my-40 ">
             No cars specified above are available
           </div>
         )}

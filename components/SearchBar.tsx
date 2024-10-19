@@ -73,7 +73,7 @@ export default function SearchBar() {
 
   return (
     <form
-      className=" w-full flex flex-col gap-3 justify-evenly sm:flex-row sm:w-full sm:gap-0"
+      className=" w-full flex flex-col gap-3 justify-evenly sm:flex-row sm:w-full sm:gap-0 "
       onSubmit={handleSubmit}
     >
       <div className="flex justify-start items-center grow">
@@ -81,7 +81,6 @@ export default function SearchBar() {
           manufacturer={manufacturer}
           setManufacturer={setManufacturer}
         />
-        <SearchButton otherClasses="sm:hidden" />
       </div>
       <div className="flex justify-start items-center grow ">
         <SearchModel
@@ -89,7 +88,6 @@ export default function SearchBar() {
           setModel={setModel}
           manufacturer={manufacturer}
         />
-        <SearchButton otherClasses="sm:hidden" />
       </div>
       <SearchButton otherClasses="max-sm:hidden" />
       <div className="home__filter-container sm:ms-5  flex justify-center items-center">
@@ -99,6 +97,7 @@ export default function SearchBar() {
           setParams={setYear}
         />
         <CustomFilter title="Fuel" options={fuels} setParams={setFuel} />
+        <SearchButton otherClasses="ml-auto ms sm:hidden" />
       </div>
     </form>
   );
